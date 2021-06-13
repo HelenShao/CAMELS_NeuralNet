@@ -105,7 +105,7 @@ seed       = 4
 
 # Training Parameters
 num_epochs = 500
-batch_size = 64
+batch_size = 256
 
 # Architecture Parameters
 input_size = 11         # Number of input features 
