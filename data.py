@@ -7,13 +7,15 @@ import sys, os, time
 
 # This function reads all the galaxy catalogues from the LH set
 def read_data(normalize = True, tensor = True):
+    # Define data container for all galaxies
+    n_properties = 12
+    total = 720548  # Total number of galaxies in all catalogues
+    data = np.zeros((total, n_properties), dtype=np.float32)
+    
     offset = 0
     for i in range(1000):
-        catalogue = '/projects/QUIJOTE/CAMELS/Sims/IllustrisTNG/LH_%d/fof_subhalo_tab_033.hdf5'%i
-        n_properties = 12
-        total = 720548  # Total number of galaxies in all catalogues
-
         # Open file
+        catalogue = '/projects/QUIJOTE/CAMELS/Sims/IllustrisTNG/LH_%d/fof_subhalo_tab_033.hdf5'%i
         f = h5py.File(catalogue, 'r')
 
         # Only look at galaxies with > 20 star particles
@@ -24,7 +26,6 @@ def read_data(normalize = True, tensor = True):
         n_galaxies = np.size(f['Subhalo/SubhaloMass'][:][np_mask])
 
         # Define size for data container
-        data = np.zeros((total, n_properties), dtype=np.float32)
         size = offset + n_galaxies
 
         ################################################# LOAD PROPERTIES ##############################################
