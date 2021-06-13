@@ -3,7 +3,6 @@
 
 # In[1]:
 
-
 import numpy as np
 import matplotlib.pyplot as plt
 import sys, os
@@ -21,7 +20,7 @@ import h5py
 # In[2]:
 
 
-"""rial 12 finished with value: 0.03468797908739207 and parameters: 
+"""Trial 12 finished with value: 0.03468797908739207 and parameters: 
 {'n_layers': 1, 'n_units_0': 249, 'lr': 0.001016956828821507, 'wd': 0.0004497269740382847}. 
 Best is trial 12 with value: 0.03468797908739207
 """
