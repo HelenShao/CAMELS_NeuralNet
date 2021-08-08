@@ -427,7 +427,7 @@ plt.plot(np.full((17), 10), np.arange(17), color="black", linestyle = "--")
 plt.plot(np.full((17), 12), np.arange(17), color="black", linestyle = "--")
 
 # Text
-plt.text(6.6, 15, "3.91e-3", fontsize=23)
+plt.text(6.6, 15, "3.86e-3", fontsize=23)
 plt.text(6.52, 14.55, " %.2f"%(percentage_S)+"%", fontsize=23)
 
 plt.text(10.1, 15, "1.99e-2", fontsize=23)
